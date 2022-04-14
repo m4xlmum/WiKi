@@ -1,0 +1,61 @@
+site_name: LoricPoem's personal wiki
+site_author: LoricPoem
+copyright: "Copyright &copy; 2022 -  xxxx"
+
+nav:
+    - 主页: index.md
+    - 信息安全:
+        - web安全:
+            - 靶场渗透:
+                - 红日靶场七: "信息安全/web安全/靶场渗透/红日靶场七.md"
+
+theme:
+    name: "material"
+    palette: # 更改配色
+        primary: "black" # 主色
+        accent: "deep orange" # 强调色
+    features:
+        # 横向导航
+        - navigation.tabs
+        - navigation.tabs.sticky
+    language: "zh"
+
+markdown_extensions:
+    - meta # 支持markdown博客文件头的元数据，比如标题
+    - toc:
+        permalink: "#"
+        baselevel: 1
+        separator: "_"
+    - footnotes # 支持脚注
+    - admonition  # 支持提示块
+    - pymdownx.details  # 提示块可折叠
+    - attr_list 
+    - pymdownx.inlinehilite # 支持行内语法高亮
+plugins:
+    - mknotebooks:
+        enable_default_jupyter_cell_styling: false
+        enable_default_pandas_dataframe_styling: false
+        # write_markdown: true
+    - search: # 搜索
+        lang:
+            - en
+            - ja # 日文，也勉强支持中文
+        separator: '[\s\-\.]+' # 分词分隔符
+#google_analytics: # 谷歌分析
+#  - XX-XXXXXXXXX-X
+#  - auto
+extra:
+    social: # 社交账号
+        - icon: fontawesome/brands/github
+          link: https://github.com/m4xlmum
+        # disqus: XXXXXXXX # disqus评论插件
+
+# 自定义css
+extra_css:
+    - 'assets/css/custom.css'
+    - 'assets/css/simpleLightbox.min.css'
+# 自定义js
+extra_javascript:
+    - 'assets/js/jquery-3.6.0.min.js'
+    - 'assets/js/simpleLightbox.min.js'
+    - 'assets/js/custom.js'
