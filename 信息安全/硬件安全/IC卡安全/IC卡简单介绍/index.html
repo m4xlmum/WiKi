@@ -412,6 +412,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    一卡通
+  </a>
+  
+    <nav class="md-nav" aria-label="一卡通">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    一卡通常使用的卡片类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#icid" class="md-nav__link">
+    IC卡当作ID卡使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -607,6 +634,33 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    一卡通
+  </a>
+  
+    <nav class="md-nav" aria-label="一卡通">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    一卡通常使用的卡片类型
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#icid" class="md-nav__link">
+    IC卡当作ID卡使用
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -633,6 +687,16 @@
 <p>根据卡中所镶嵌集成电路的不同，IC卡可分为存储卡、<a href="https://baike.baidu.com/item/非接触式IC卡/2417459">非接触式IC卡</a>、光卡、非接触式智能IC卡、智能卡。<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
 </blockquote>
 <p>普通IC卡，0扇区不可以修改，其他扇区可反复擦写，我们使用的电梯卡、门禁卡等智能卡发卡商所使用的都是 M1 卡，可以理解为物业发的母卡。其他IC卡都是后门卡，可通过各种写入方法修改0扇区，实现复制母卡的目的。<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
+<p><img alt="image-20220422135236093" src="image-20220422135236093.png" /></p>
+<h2 id="_1">一卡通<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
+<h3 id="_2">一卡通常使用的卡片类型<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
+<p>​   一卡通多使用IC卡、CPU卡制作，ID卡用作一卡通不安全(主要因为ID卡无密钥，容易破解)。IC卡相对于ID卡来说能存储一定量的数据，更方便且相对安全。</p>
+<p>​   ID卡一旦出生，身上的ID号就已经注定了。ID号对应的数据主要存储在服务端，数据操作也主要在服务端，但这种ID卡应该更容易被伪造，所以相对来说并不安全。而IC卡内部有一定的存储空间，进行身份验证以及数据操作的时候更加方便，同时因为IC卡的每一个扇区被可以被加密，故相对来说也比较安全，更适合作为一卡通来使用。</p>
+<h3 id="icid">IC卡当作ID卡使用<a class="headerlink" href="#icid" title="Permanent link">#</a></h3>
+<p>​   某些一卡通系统可能会出现这种情况，卡片内除了<code>0区0块</code>，其他区块基本上什么信息都不会存储，这种就是典型的IC卡片当作ID卡来使用了。</p>
+<p>​   而IC卡的绝对0块(0区0块)主要存放的是厂商代码，已经固化，不可更改。那就和一般的id卡差不多了，与id卡的工作流程类似了，数据处理主要放在云端来进行。我校一卡通使用的就是这种方法，似乎是，但是门禁系统用的应该就是前面的id号，识别到卡号就会开门这个样子。那这样的话，我们有了前面0区0块的内容就能对卡进行复制了，毕竟没什么数据操作的话，用来当门禁卡使用也是可以的。</p>
+<p><img alt="image-20220422163215114" src="image-20220422163215114.png" /></p>
+<p>​   如果我们的卡片识别出来的内容是上面这样的话，说明我们可以对卡进行复制来作为门禁使用，但是最好不要进行编辑。</p>
 <div class="footnote">
 <hr />
 <ol>
