@@ -687,7 +687,82 @@
 <p>根据卡中所镶嵌集成电路的不同，IC卡可分为存储卡、<a href="https://baike.baidu.com/item/非接触式IC卡/2417459">非接触式IC卡</a>、光卡、非接触式智能IC卡、智能卡。<sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup></p>
 </blockquote>
 <p>普通IC卡，0扇区不可以修改，其他扇区可反复擦写，我们使用的电梯卡、门禁卡等智能卡发卡商所使用的都是 M1 卡，可以理解为物业发的母卡。其他IC卡都是后门卡，可通过各种写入方法修改0扇区，实现复制母卡的目的。<sup id="fnref:2"><a class="footnote-ref" href="#fn:2">2</a></sup></p>
-<p><img alt="image-20220422135236093" src="IC卡简单介绍/image-20220422135236093.png" /></p>
+<table>
+<thead>
+<tr>
+<th>卡类型</th>
+<th>芯片名称</th>
+<th>频率</th>
+<th>重复擦写</th>
+<th>备注说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IC卡</td>
+<td>M1卡</td>
+<td>13.56MHZ</td>
+<td>✘</td>
+<td>普通卡，0块（卡号块）出厂为锁定状态，不可用于复制，只能授权，物业卡为些卡，俗称授权卡</td>
+</tr>
+<tr>
+<td>IC卡</td>
+<td>UID卡</td>
+<td>13.56MHZ</td>
+<td>✔</td>
+<td>经典复制卡，可以反复擦写，无法穿防火墙</td>
+</tr>
+<tr>
+<td>IC卡</td>
+<td>CUID卡</td>
+<td>13.56MHZ</td>
+<td>✔</td>
+<td>穿防火墙IC复制卡，对于UID卡复制成功却刷卡无效的情况下，可以使用此卡复制</td>
+</tr>
+<tr>
+<td>IC卡</td>
+<td>FUID卡</td>
+<td>13.56MHZ</td>
+<td>✘</td>
+<td>一次性穿防火墙IC复制卡，对于CUID卡复制成功刷卡无效的情况下，可以使用此卡复制</td>
+</tr>
+<tr>
+<td>IC卡</td>
+<td>UFUID卡</td>
+<td>13.56MHZ</td>
+<td>✘</td>
+<td>一次性穿防火墙IC复制卡，但区别在于此卡支持手动锁卡，没有锁卡之前就是一张UID卡，锁卡之后不支持擦写</td>
+</tr>
+<tr>
+<td>IC卡</td>
+<td>GTU卡</td>
+<td>13.56MHZ</td>
+<td>✔</td>
+<td>可以自动复位数据的IC复制卡，用于滚动码防复制系统，支持反复擦写</td>
+</tr>
+<tr>
+<td>IC卡</td>
+<td>GDMIC卡</td>
+<td>13.56MHZ</td>
+<td>✔</td>
+<td>可以自动复位数据的IC复制卡，用于滚动码防复制系统，支持反复擦写，功能同GTU卡，生产厂商不同</td>
+</tr>
+<tr>
+<td>ID卡</td>
+<td>T5577卡 EM4305卡 5200卡</td>
+<td>125KHZ</td>
+<td>✔</td>
+<td>可擦写复制的ID卡</td>
+</tr>
+<tr>
+<td>ID卡</td>
+<td>F8268卡</td>
+<td>125KHZ</td>
+<td>✔</td>
+<td>穿防火墙ID复制卡，用于ID卡复制成功刷卡无效的情况</td>
+</tr>
+</tbody>
+</table>
 <h2 id="_1">一卡通<a class="headerlink" href="#_1" title="Permanent link">#</a></h2>
 <h3 id="_2">一卡通常使用的卡片类型<a class="headerlink" href="#_2" title="Permanent link">#</a></h3>
 <p>​   一卡通多使用IC卡、CPU卡制作，ID卡用作一卡通不安全(主要因为ID卡无密钥，容易破解)。IC卡相对于ID卡来说能存储一定量的数据，更方便且相对安全。</p>
